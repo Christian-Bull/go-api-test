@@ -1,0 +1,22 @@
+name: push
+
+# on push to master, complete the job below
+on:
+  push:
+    branches: [ master ]
+    
+jobs:
+  push_to_registry:
+    name: Push docker image to dockerhub
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out report
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: csbull55/go-api-sample
+          tag_with_ref: true
