@@ -1,4 +1,5 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/Christian-Bull/go-api-test)](https://goreportcard.com/report/github.com/Christian-Bull/go-api-test)
+![badge](https://action-badges.now.sh/Christian-Bull/go-api-test)
 
 # go-api-test
 
