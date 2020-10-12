@@ -30,7 +30,9 @@ func reverseString(w http.ResponseWriter, r *http.Request) {
 	}
 	var inputs []Input
 	err = json.Unmarshal(b, &inputs)
-
+	if err != nil {
+		fmt.Println(err)
+	}
 	// reverse the string
 	for i := 0; i < len(inputs); i++ {
 		inputs[i].Data = reverse(inputs[i].Data)
