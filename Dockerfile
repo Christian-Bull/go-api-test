@@ -10,7 +10,7 @@ ARG TARGETOS
 ARG TARGETARCH
 
 RUN mkdir /bin/app
-ADD cmd /bin/app
+ADD . /bin/app
 
 WORKDIR /bin/app
 
@@ -19,7 +19,7 @@ RUN go mod tidy -v
 RUN go mod download
 
 # builds app
-RUN GOARCH=$TARGETARCH GOOS=$TARGETOS go build -o ./go-api/.
+RUN GOARCH=$TARGETARCH GOOS=$TARGETOS go build -o go-api ./cmd/.
 EXPOSE 5050
 
 # run it
