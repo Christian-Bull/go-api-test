@@ -5,7 +5,7 @@
 
 This is just a super simple api that I use for testing  
 
-### Build instructions  
+## Build instructions  
   
 `git clone https://github.com/Christian-Bull/go-api-test.git`  
   
@@ -13,7 +13,11 @@ This is just a super simple api that I use for testing
 
 `docker run -p 5050:5050 <sometagname>`    
 <br>
+### Buildx
+`docker buildx build --platform linux/arm64,linux/amd64 -t go-api-sample:v1 . `  
+<br>
 
+## Info
 Send a list of strings to the end-point `/reverse` and you'll receive them back but reversed
 
 ```
