@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/Christian-Bull/go-api-test)](https://goreportcard.com/report/github.com/Christian-Bull/go-api-test)
+
 # go-api-test
 
 This is just a super simple api that I use for testing  
